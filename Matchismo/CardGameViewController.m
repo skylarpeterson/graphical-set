@@ -116,6 +116,9 @@
                         completion:nil];
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i", self.game.score];
+    
+    UIDynamicAnimator *dynamicAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.cardSuperView];
+    
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
