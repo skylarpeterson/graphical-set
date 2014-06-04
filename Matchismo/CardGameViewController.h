@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CardMatchingGame.h"
+#import "Grid.h"
 
-@interface CardGameViewController : UIViewController
+@interface CardGameViewController : UIViewController <UIGestureRecognizerDelegate>
+
+@property (strong, nonatomic) CardMatchingGame *game;
+@property (strong, nonatomic) Deck *deck;
+@property (strong, nonatomic) NSMutableArray *cardViews;
+@property (weak, nonatomic) IBOutlet UIView *cardSuperView;
+
+- (void)setMode:(NSInteger)mode;
+- (void)setup;
+- (void)cardTapped:(UITapGestureRecognizer *)gestureRecognizer;
 
 @end
